@@ -1,0 +1,274 @@
+/* style.css */
+
+/* downloadable fonts */
+@import url("/fonts/ubuntu01.css");
+/* end of downloadable fonts */
+
+body{
+    background-color    : #300a24;
+    font-family         : "Ubuntu", serif;
+    color               : #ffffff;
+    font-size           : 20pt;
+    cursor              : default;
+    -webkit-user-select : none;
+    -moz-user-select    : none;
+    user-select         : none;
+}
+
+a{
+    color           : #ffffff;
+    text-decoration : none;
+}
+
+h1{
+    font-family : "Ubuntu", serif;
+    color       : #ffffff;
+    font-size   : 25pt;
+    font-weight : bold;
+    text-align  : center;
+}
+
+h2{
+    font-family   : "Ubuntu", serif;
+    color         : #ffffff;
+    font-size     : 18pt;
+    font-weight   : normal;
+    text-align    : center;
+    margin-bottom : 60px;
+}
+
+table{
+    width        : 100%;
+    table-layout : fixed;
+}
+
+table, th, td{
+    border          : 1px solid #ffffff;
+    border-collapse : collapse;
+    padding         : 10px;
+}
+
+td{
+  width         : 350px;
+  white-space   : nowrap;
+  overflow      : hidden;
+  text-overflow : ellipsis;
+  text-align    : center;
+}
+
+.truncate{
+  width         : 350px;
+  white-space   : nowrap;
+  overflow      : hidden;
+  text-overflow : ellipsis;
+}
+
+/* notification code */
+#note{
+    position          : absolute;
+    z-index           : 6001;
+    top               : 0;
+    left              : 0;
+    right             : 0;
+    background        : #300a24;
+    text-align        : center;
+    line-height       : 2.5;
+    overflow          : hidden;
+    border-radius     : 3em;
+    box-shadow        : 5px 5px 50px #ffffff;
+    -webkit-transform : translateY(-500px);
+    -moz-transform    : translateY(-500px);
+    transform         : translateY(-500px);
+    -webkit-animation : slideDown 5.0s 1.0s 1 ease forwards;
+    -moz-animation    : slideDown 5.0s 1.0s 1 ease forwards;
+    animation         : slideDown 5.0s 1.0s 1 ease forwards;
+}
+
+@-webkit-keyframes slideDown{
+    0%, 100%{
+        -webkit-transform: translateY(-500px);
+    }
+
+    10%, 90%{
+        -webkit-transform: translateY(0px);
+    }
+}
+
+@-moz-keyframes slideDown{
+    0%, 100%{
+        -moz-transform: translateY(-500px);
+    }
+
+    10%, 90%{
+        -moz-transform: translateY(0px);
+    }
+}
+/* end of notification code */
+
+textarea{
+    background-color : #300a24;
+    font-family      : "Ubuntu", serif;
+    color            : #ffffff;
+    font-size        : 20pt;
+    cursor           : default;
+    border           : none;
+}
+
+input{
+    background-color : #300a24;
+    font-family      : "Ubuntu", serif;
+    width            : 100%;
+    color            : #ffffff;
+    font-size        : 20pt;
+    cursor           : default;
+    border           : none;
+}
+
+input[type=file]{
+    background-color : #300a24;
+    font-family      : "Ubuntu", serif;
+    width            : 100%;
+    color            : #ffffff;
+    font-size        : 20pt;
+    cursor           : default;
+    border           : 0.0625em solid #ffffff;
+    border-radius    : 3em;
+}
+
+/* radio styling code */
+input[type=radio]{
+    width     : 2em;
+    margin    : 0;
+    padding   : 0;
+    font-size : 1em;
+    opacity   : 0;
+}
+
+input[type=radio]+label{
+    display     : inline-block;
+    margin-left : -2em;
+    line-height : 1.5em;
+}
+
+input[type=radio]+label>span{
+    display        : inline-block;
+    width          : 0.875em;
+    height         : 0.875em;
+    margin         : 0.25em 0.5em 0.25em 0.25em;
+    border         : 0.0625em solid #ffffff;
+    border-radius  : 3em;
+    background     : #300a24;
+    vertical-align : bottom;
+}
+
+input[type=radio]:checked+label>span>span{
+    display       : block;
+    width         : 0.5em;
+    height        : 0.5em;
+    margin        : 0.150em;
+    border        : 0.0625em solid #300a24;
+    border-radius : 3em;
+    background    : #ffffff;
+}
+/* end of radio styling code */
+
+/* checkbox styling code */
+input[type=checkbox]{
+    width     : 2em;
+    margin    : 0;
+    padding   : 0;
+    font-size : 1em;
+    opacity   : 0;
+}
+
+input[type=checkbox]+label{
+    display     : inline-block;
+    margin-left : -2em;
+    line-height : 1.5em;
+}
+
+input[type=checkbox]+label>span{
+    display        : inline-block;
+    width          : 0.875em;
+    height         : 0.875em;
+    margin         : 0.25em 0.5em 0.25em 0.25em;
+    border         : 0.0625em solid #ffffff;
+    border-radius  : 5px;
+    background     : #300a24;
+    vertical-align : bottom;
+}
+
+input[type=checkbox]:checked+label>span>span{
+    display       : block;
+    width         : 0.5em;
+    height        : 0.5em;
+    margin        : 0.150em;
+    border        : 0.0625em solid #300a24;
+    border-radius : 5px;
+    background    : #ffffff;
+}
+/* end of checkbox styling code */
+
+button, .button{
+    background-color : #300a24;
+    font-family      : "Ubuntu", serif;
+    width            : 100%;
+    color            : #ffffff;
+    font-size        : 20pt;
+    cursor           : default;
+    border           : 0.0625em solid #ffffff;
+    border-radius    : 3em;
+    text-align       : center;
+}
+
+div.bottom{
+    background : #300a24;
+    position   : fixed;
+    bottom     : 0px;
+    left       : 0px;
+    width      : 100%;
+}
+
+::-webkit-file-upload-button{
+    background-color : #300a24;
+    font-family      : "Ubuntu", serif;
+    width            : 45%;
+    color            : #ffffff;
+    font-size        : 20pt;
+    cursor           : default;
+    border           : 0.0625em solid #ffffff;
+    border-radius    : 3em;
+    outline          : none;
+}
+
+::-webkit-input-placeholder{
+    color: #ae6bae;
+}
+
+::-moz-placeholder{
+    color: #ae6bae;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+*:focus{
+    outline: 0;
+}
+
+#superset{
+    width         : 350px;
+    margin        : 0 auto;
+    position      : relative;
+    left          : 0px;
+    right         : 0px;
+    margin-bottom : 75px;
+}
+
+#image{
+    float  : right;
+    width  : 40%;
+    height : 40%;
+}
+/* end of style.css */
